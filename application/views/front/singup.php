@@ -79,13 +79,14 @@
                 </div>
             </div>
 
-
+<div class='row'>
                 <div class="col-md-6">
                         <div class="form-group">
+                        <label for="mode">Mode</label>
                                  
                         <select name="mode" id="mode" name="mode" placeholder="mode">
                             <optgroup label="mode">
-                        <option value="vendor">Vendor</option>
+                        <option value="vendor">Business</option>
                         <option value="customer">Customer</option>
                             </optgroup>
                         </select>
@@ -93,7 +94,9 @@
                         <?php echo form_error('mode'); ?>
                         <span></span>
                     </div>
-                    <div class="form-group " class="col-md-6">
+</div>
+                    <div class="col-md-6">
+                    <div class="form-group">
                         <label for="electric_pole_no">Electric Pole Number</label>
                         <input type="text" class="form-control
                 <?php echo (form_error('electric_pole_no') != "") ? 'is-invalid' : '';?>" name="electric_pole_no" placeholder="electric_pole_no"
@@ -101,6 +104,7 @@
                         <?php echo form_error('electric_pole_no'); ?>
                         <span></span>
                     </div>
+                </div>
                 </div>
             
 

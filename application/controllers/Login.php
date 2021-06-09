@@ -27,7 +27,15 @@ class Login extends CI_Controller {
                     $userArray['user_id'] = $user['u_id'];
                     $userArray['username'] = $user['username'];
                     $this->session->set_userdata('user', $userArray);
+                    if ($user["mode"] =='customer'){
                     redirect(base_url().'home/index');
+                }
+                elseif ($user["mode"] =='vendor'){
+                    redirect(base_url().'vendorhome/index');
+                }
+                elseif ($user["mode"] =='admin'){
+                    redirect(base_url().'adminhome/index');
+                }
                 } else {
                     $this->session->set_flashdata('msg', 'Either username or password is incorrect');
                     redirect(base_url().'login/index');

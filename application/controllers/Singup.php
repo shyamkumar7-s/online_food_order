@@ -37,9 +37,17 @@ class Singup extends CI_Controller {
             $formArray['electric_pole_no'] = $this->input->post('electric_pole_no');
             $formArray['address'] = $this->input->post('address');
             $this->User_model->create($formArray);
+            if($formArray['mode']=='vendor'){
+                $this->load->model('User_model');
+                $username = $this->input->post('username');
+                $user = $this->User_model->getByUsername($username);
+
+                $this->session->set_flashdata('user',$user['u_id']);
+                redirect(base_url().'vendor/store/index');
+            } else {
             $this->session->set_flashdata("success", "Account created successfully, please login");
             redirect(base_url().'login/index');
-        } else {
+   }     } else {
             $this->load->view('front/singup');
         }
     }

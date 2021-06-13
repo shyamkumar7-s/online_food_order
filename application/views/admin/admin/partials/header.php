@@ -38,12 +38,12 @@
                     <li class="nav-item dropdown active ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Restaurant
+                            Store
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?php echo base_url().'admin/store/';?>">Manage Restaurant</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/store/';?>">Manage Store</a>
                             <a class="dropdown-item"
-                                href="<?php echo base_url().'admin/store/create_restaurant';?>">Create Restaurant</a>
+                                href="<?php echo base_url().'admin/store/create_restaurant';?>">Create Store</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown active">
@@ -62,6 +62,17 @@
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/menu/';?>">Manage Menu</a>
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/menu/create_menu';?>">Create
+                                Menu</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Orders
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -69,7 +80,7 @@
                         </div>
                     </li>
                     <li class="nav-item active">
-                        <a href="<?php echo base_url().'login/logout';?>"
+                        <a href="<?php echo base_url().'admin/login/logout';?>"
                             class="nav-link">Logout </a>
                     </li>
                 </ul>

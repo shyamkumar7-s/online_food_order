@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root{
+  --main-body-color:	#080808;
+  --main-text-color:	#fff;
+  --main-primary-color: #f8cd21;
+  --boxshadow:#fad12c21;
+} 
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 .wrapper {
   background-color: aliceblue;
   padding: 30px 50px;
@@ -24,7 +26,7 @@ label {
 }
 
 .form-control {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 input[placeholder] {
@@ -55,12 +57,12 @@ select:focus {
 }
 
 .button:hover {
-  background-color: #0779e4;
+  background-color: var(--main-primary-color);
   color: #fff;
 }
 
 .btn-primary {
-  background-color: #0779e4;
+  background-color: var(--main-primary-color);
 }
 
 .danger {
@@ -91,4 +93,15 @@ input::-webkit-inner-spin-button {
   .wrapper {
     padding: 25px 20px;
   }
+}
+
+.user-login{
+  background-color:var(--main-body-color);
+}
+.user-login-form{
+  width: 1000px;
+  margin: auto;
+  border: 1px solid var(--boxshadow);
+  padding: 3rem;
+  border-radius: 4px;
 }

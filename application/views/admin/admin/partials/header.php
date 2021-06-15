@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/dashboard.css');?>">
 </head>
 
-<body class="bg-white">
+<body >
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+    <nav class="navbar navbar-expand-md  bg-light sticky-top mb-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo base_url().'admin/home';?>">Admin Panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">

@@ -13,6 +13,7 @@
     <script src="<?php echo base_url().'assets/js/jquery-3.6.0.min.js';?>"></script>
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js';?>"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/custom-bootstrap-overwrite.css');?>">  
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/profile.css');?>">
 </head>
 

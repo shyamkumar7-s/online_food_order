@@ -1,0 +1,19 @@
+
+:root{
+    --main-body-color:	#080808;
+    --main-text-color:	#fff;
+    --main-primary-color: #FAD02C;
+  }
+
+.btn-primary{
+    background-color: var(--main-primary-color);
+    border: 1px solid var(--main-primary-color);
+}
+
+.form-control{
+    border-radius:5px !important;
+}
+label{
+    color:var(--main-body-color) !important;
+    font-size:1rem !important;
+}

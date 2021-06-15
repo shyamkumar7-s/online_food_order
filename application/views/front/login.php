@@ -11,10 +11,44 @@
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js';?>"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/profile.css');?>">
+    <style>
+      .user-login{
+          background:url('https://hdwallpapers.move.pk/wp-content/uploads/2015/02/rice-food.jpg') no-repeat;
+          background-size: 100%;
+          display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .user-login-form{
+        width: 1000px;
+        outline: 10px solid #fad958;
+        display: flex;
+        padding:20px
+        }
+        .user-login .login{
+        color:#000;
+        background-color:#f8cd21;
+        width:500px;
+        }
+        .user-login .login-form{
+            width: 100%;
+            background-color:#fff;
+        }
+        .form-control{
+            border-radius:5px;
+            height:40px;
+        }
+        </style>
 </head>
 
-<body>
-    <div class="wrapper mt-sm-5">
+<body class="user-login">
+    <div class="user-login-form">
+        <div class="login p-5 text-center">
+        <h3 class="font-weight-bold ">Login To Your Account</h3>
+        <p class="text-white mt-5"> One cannot think well, love well, sleep well, if one has not dined well.</p>
+    </div>
+        <form action="<?php echo base_url().'login/authenticate' ;?>" name="loginform" id="loginform" method="POST" class="p-5 login-form">
         <?php
         if (!empty($this->session->flashdata('success'))) {
           echo "<div class='alert alert-success m-3 mx-auto'>".$this->session->flashdata('success')."</div>";
@@ -25,8 +59,6 @@
           echo "<div class='alert alert-danger m-3 mx-auto'>".$this->session->flashdata('msg')."</div>";
         }
         ?>
-        <h4 class="pb-4 border-bottom text-center">Login To Your Account</h4>
-        <form action="<?php echo base_url().'login/authenticate' ;?>" name="loginform" id="loginform" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" class="form-control bg-light" name="username" id="username"
@@ -41,9 +73,9 @@
                 <span></span>
             </div>
             <?php echo form_error('password'); ?>
-            <div class="py-3 pb-4 border-bottom">
-                <button type="submit" class="btn btn-success mr-3">Login</button>
-                <a href="<?php echo base_url().'singup/index' ?>" class="btn btn-danger">Register</a>
+            <div class="d-flex justify-content-between aliign-items-center mt-4 pt-4">
+                <a href="<?php echo base_url().'singup/index' ?>" class="btn">Register</a>
+                <button type="submit" class="btn btn-primary px-5 ml-3">Login</button>
             </div>
         </form>
     </div>

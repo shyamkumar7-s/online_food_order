@@ -22,7 +22,7 @@
     <div class="row">
         <?php if(!empty($dishesh)) { ?>
         <?php foreach($dishesh as $dish) { ?>
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
             <div class="card mb-4 shadow-sm">
                 <?php $image = $dish['img'];?>
                 <img class="card-img-top" src="<?php echo base_url().'public/uploads/dishesh/thumb/'.$image; ?>">

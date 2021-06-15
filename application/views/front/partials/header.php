@@ -9,6 +9,7 @@
     <script src="<?php echo base_url().'assets/js/jquery-3.6.0.min.js';?>"></script>
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js';?>"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/custom-bootstrap-overwrite.css');?>">  
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css'); ?>">
     <style>
     
@@ -18,9 +19,9 @@
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-md sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-utensil-spoon"></i> Food Ordering System</a>
+            <a class="navbar-brand" href="<?php echo base_url().'home/index';?>"><i class="fas fa-lemon"></i> Food O .S</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>

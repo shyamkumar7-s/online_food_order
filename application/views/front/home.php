@@ -1,3 +1,5 @@
+
+    <link rel="stylesheet" href="<?php echo base_url('/assets/css/style.css'); ?>">
 <div id="slides" class="carousel slide carousel-cus" data-ride="carousel">
     <ul class="carousel-indicators">
         <li data-target="#slides" data-slide-to="0" class="active"></li>
@@ -11,7 +13,7 @@
                 <h1 class="display-2">Hungry?!</h1>
                 <h3>Good, we are here to serve you</h3>
                 <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg ml-3">View Menu</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -20,7 +22,7 @@
                 <h1 class="display-2">Hungry?!</h1>
                 <h3>Good, we are here to serve you</h3>
                 <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg  ml-3">View Menu</a>
             </div>
         </div>
         <div class="carousel-item">
@@ -29,56 +31,54 @@
                 <h1 class="display-2">Hungry?!</h1>
                 <h3>Good, we are here to serve you</h3>
                 <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-outline-light btn-lg">Order Now</a>
-                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg">View Menu</a>
+                <a href="<?php echo base_url().'restaurant/index'?>" class="btn btn-primary btn-lg  ml-3">View Menu</a>
             </div>
         </div>
     </div>
 </div>
-<div class="container-fluid padding">
+<div class="container padding">
     <div class="row text-center welcome">
-        <div class="col-12">
-            <h1 class="display-4">Easy 3 Steps To Follow</h1>
+        <div class="col-12 py-0">
+            <h1 class="font-weight-bold">Easy 3 Steps To Follow</h1>
         </div>
-        <hr>
         <div class="col-12">
-            <p class="lead">The easiest way to your food. Food Ordering System provides fresh delivery
+            <p class="text-secondary ">The easiest way to your food. Food Ordering System provides fresh delivery
                 with in the 30 minutes and provide free food if order is not on time. So don't wait and start ordering right now!</p>
         </div>
     </div>
 </div>
-<div class="container-fluid padding">
+<div class="container padding">
     <div class="row text-center padding">
         <div class="col-xs-12 col-sm-6 col-md-4">
             <i class="fas fa-utensils"></i>
             <h3>Choose A Restaurant</h3>
-            <p>First thing you can do is choose from our restautant partners easily!</p>
+            <p class="text-secondary ">First thing you can do is choose from our restautant partners easily!</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4">
             <i class="fas fa-bullseye"></i>
             <h3>Choose A Tasty Dish</h3>
-            <p>We've got you covered with menus from over various delivery restaurants online!</p>
+            <p class="text-secondary ">We've got you covered with menus from over various delivery restaurants online!</p>
         </div>
         <div class="col-sm-12 col-md-4">
         <i class="fas fa-clipboard-check"></i>
             <h3>Pick Up or Delivery</h3>
-            <p>After all, the food gets delivered or you can pick it up as per your choices!</p>
+            <p class="text-secondary ">After all, the food gets delivered or you can pick it up as per your choices!</p>
         </div>
     </div>
     <hr class="my-4">
 </div>
 <div class="container-fluid padding">
     <div class="row welcome text-center welcome">
-        <div class="col-12">
-            <h1 class="display-4">Popular Dishes</h1>
+        <div class="col-12 py-0">
+            <h1 class="font-weight-bold">Popular Dishes</h1>
         </div>
-        <hr>
     </div>
 </div>
 <div class="container-fluid padding dish-card">
     <div class="row">
         <?php if(!empty($dishesh)) { ?>
         <?php foreach($dishesh as $dish) { ?>
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
             <div class="card mb-4 shadow-sm">
                 <?php $image = $dish['img'];?>
                 <img class="card-img-top" src="<?php echo base_url().'public/uploads/dishesh/thumb/'.$image; ?>">
@@ -87,10 +87,11 @@
                         <h4 class="card-title"><?php echo $dish['name']; ?></h4>
                         <h4 class="text-muted"><b>₹<?php echo $dish['price']; ?></b></h4>
                     </div>
-                    <p class="card-text"><?php echo $dish['about']; ?></p>
-                    <a href="<?php echo base_url().'Dish/addToCart/'.$dish['d_id']; ?>" class="btn btn-primary"><i
+                    <a href="<?php echo base_url().'Dish/addToCart/'.$dish['d_id']; ?>" class="btn btn-primary my-2 ml-2" style="float:right"><i
                             class="fas fa-cart-plus"></i> Add to
                         Cart</a>
+                    <p class="card-text"><?php echo $dish['about']; ?></p>
+                    
                 </div>
             </div>
         </div>
@@ -103,6 +104,7 @@
     </div>
     <hr class="my-4">
 </div>
+<div class="d-flex align-item-center">
 <div class="container-fluid padding">
     <div class="row text-center padding">
         <div class="col-12">
@@ -117,16 +119,16 @@
         </div>
     </div>
 </div>
-<hr class="my-4">
-<section id="contact-us" class="container shadow my-4 p-4">
+<section id="contact-us" class="container shadow mb-4 mr-4 border rounded p-3">
     <!--Section heading-->
+   
+    <h2 class="text-center my-2 font-weight-bold">Contact Us</h2>
+    <p class="text-center">Always Here For You</p>
     <?php if($this->session->flashdata('msg') != ""):?>
-    <div class="alert alert-success">
+    <div class="alert alert-info">
         <?php echo $this->session->flashdata('msg');?>
     </div>
     <?php endif ?>
-    <h2 class="text-center my-2 font-weight-bold">Contact Us</h2>
-    <p class="text-center">Always Here For You</p>
     <!--Section description-->
     <p class="text-center mx-auto mb-5"></p>
     <form name="contact-form" action="<?php echo base_url().'home/sendMail'; ?>" id="myForm" method="POST">
@@ -167,10 +169,14 @@
             </div>
         </div>
         <div class="status text-danger font-weight-bold my-2"></div>
-        <button class="btn btn-info" type="submit">Submit</button>
+        <div class="text-right">
+        <button class="btn btn-primary px-4" type="submit">Submit</button>
+
+        </div>
     </form>
 
 </section>
+    </div>
 <script>
 const form = document.getElementById('myForm');
 const userName = document.getElementById('name');

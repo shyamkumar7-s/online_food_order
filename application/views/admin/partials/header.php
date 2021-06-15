@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/dashboard.css');?>">
 </head>
 
-<body class="bg-white">
+<body>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">

@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300&display=swap');
+
+:root{
+  --main-body-color:	#080808;
+  --main-text-color:	#fff;
+  --main-primary-color: #FAD02C;
+}
 
 * {
   outline: none;
@@ -8,7 +15,9 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  color: #222;
+  color: var(--main-text-color);
+  background-color: var(--main-body-color);
+  font-family: 'Karla', sans-serif;
 }
 .navbar {
   padding: 0.8rem;
@@ -17,7 +26,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #6648b1 !important;
+  color: var(--main-primary-color);
+}
+.navbar-brand:hover , .navbar-brand:focus{
+  color: var(--main-primary-color) !important;
 }
 .navbar li {
   padding-right: 20px;
@@ -115,4 +127,11 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+/* Custom Styles */
+footer{
+  position: fixed;
+    inset: auto auto 0 0;
+    width: 100%;
 }

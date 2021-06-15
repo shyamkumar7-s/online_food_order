@@ -25,6 +25,7 @@
         outline: 10px solid #fad958;
         display: flex;
         padding:20px
+        border: 1px solid #f8cd21;
         }
         .user-login .login{
         color:#000;
@@ -46,7 +47,7 @@
     <div class="user-login-form">
         <div class="login p-5 text-center">
         <h3 class="font-weight-bold ">Login To Your Account</h3>
-        <p class="text-white mt-5"> One cannot think well, love well, sleep well, if one has not dined well.</p>
+        <p class="text-white mt-5">" One cannot think well, love well, sleep well, if one has not dined well. "</p>
     </div>
         <form action="<?php echo base_url().'login/authenticate' ;?>" name="loginform" id="loginform" method="POST" class="p-5 login-form">
         <?php

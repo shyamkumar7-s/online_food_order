@@ -95,13 +95,3 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.user-login{
-  background-color:var(--main-body-color);
-}
-.user-login-form{
-  width: 1000px;
-  margin: auto;
-  border: 1px solid var(--boxshadow);
-  padding: 3rem;
-  border-radius: 4px;
-}

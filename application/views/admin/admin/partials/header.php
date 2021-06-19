@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md  bg-light sticky-top mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'admin/home';?>">Admin Panel</a>
+            <a class="navbar-brand text-uppercase" href="<?php echo base_url().'admin/home';?>">Admin Panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>

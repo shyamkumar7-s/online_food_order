@@ -15,12 +15,31 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/custom-bootstrap-overwrite.css');?>">  
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('/assets/css/profile.css');?>">
+
+    <style>
+    .user-create-account{
+        height: 100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background:  url('https://images.unsplash.com/photo-1495195134817-aeb325a55b65?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGZvb2R8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60') #f8cd214d no-repeat;
+        background-size:100% 100%;
+    }
+    .user-create-account .user-create-form{
+        padding: 50px;
+        width: calc(100vw - 150px) !important;
+        max-width: unset;
+        background-color: #fbf9f2;
+        outline: 5px solid #f8cd21;
+        outline-offset: -25px;
+        box-shadow: 0 0 5px #f8cd21b8;
+    }
+    </style>
 </head>
 
-<body>
-    <div class="wrapper container">
-
-        <h1 class="text-center my-3">Create Your Account</h1>
+<body class="user-create-account">
+    <div class="wrapper container user-create-form">
+        <h3 class="text-center my-3 text-uppercase ">Create Your Account</h3>
         <form action="<?php echo base_url().'singup/create_user'; ?>" method="POST" name="myForm" id="myForm"
             class="form-container mx-auto shadow-container">
             <div class="row">
@@ -119,8 +138,10 @@
                 <span></span>
             </div>
             <div class="status text-center text-danger font-weight-bold my-2"></div>
-            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
-            <p>Already registered? <a href="<?php echo base_url().'login/index';?>">Login Now!</a></p>
+           <div class='d-flex align-items-center justify-content-between'>
+           <p>Already registered? <a href="<?php echo base_url().'login/index';?>">Login Now!</a></p>
+           <button type="submit" class="btn btn-primary">Create Account</button>
+           </div>
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

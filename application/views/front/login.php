@@ -24,7 +24,7 @@
         width: 1000px;
         outline: 10px solid #fad958;
         display: flex;
-        padding:20px
+        padding:20px;
         border: 1px solid #f8cd21;
         }
         .user-login .login{

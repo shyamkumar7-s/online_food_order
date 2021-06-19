@@ -9,8 +9,8 @@
             <?php $img = $res['img'];?>
             <img src="<?php echo base_url().'public/uploads/restaurant/thumb/'.$img; ?>" class="card-img-top" />
             <div class="card-body">
-                <h4 class="card-title font-weight-bold text-primary"><?php echo $res['name']; ?></h4>
-                <p class="card-text lead"><?php echo $res['address']; ?></p>
+                <h4 class="card-title font-weight-bold text-warning mb-1"><?php echo $res['name']; ?></h4>
+                <p class="card-text text-secondary"><?php echo $res['address']; ?></p>
                 <p class="card-text">
                 A feast of gorgeousness awaits you with super-seasonal dishes created with love by our wonderful chefs.
                 </p>

@@ -6,6 +6,11 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2>Restaurants Report</h2>
+                    <?php $user = $this->session->userdata('user');                     ?>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php echo ($user['username']); ?>
+                </a>
                 </div>
                 <div class="col-md-12">
                     <table class="table table-striped table-responsive table-hover">
@@ -71,9 +76,16 @@
                     </table>
                 </div>
                 <div class="col-md-12">
-                    <a href="<?php $id=2; echo base_url().'admin/home/generate_pdf/'.$id; ?>"
-                        class="btn btn-success mb-3">Download Report</a>
+                <?php $user = $this->session->userdata('user');
+                $data=$user["username"];
+                ?>
+                    <a href="<?php echo base_url()?>vendor/menu/index/<?php echo $data; ?>"
+                        class="btn btn-success mb-3">undakunnu</a>
                 </div>
+                <div class="col-md-12">
+                <a href="<?php echo base_url()?>vendor/menu/create_menu/<?php echo $data; ?>"
+                        class="btn btn-success mb-3">undakkunnu</a>
+                        </div>
             </div>
         </div>
     </div>

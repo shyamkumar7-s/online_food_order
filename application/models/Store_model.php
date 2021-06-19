@@ -17,6 +17,11 @@ class Store_model extends CI_Model {
         $store = $this->db->get('restaurants')->row_array();
         return $store;
     }
+    public function getUserStore($id) {
+        $this->db->where('u_id', $id);
+        $store = $this->db->get('restaurants')->row_array();
+        return $store;
+    }
 
     public function update($id, $formArray) {
         $this->db->where('r_id', $id);

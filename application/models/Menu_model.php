@@ -33,8 +33,8 @@ class Menu_model extends CI_Model {
         return $query->num_rows();
     }
 
-    public function getDishesh($id) {
-        $this->db->where('r_id', $id);
+    public function getDishesh($rid) {
+        $this->db->where('r_id', $rid);
         $dish = $this->db->get('dishesh')->result_array();
         return $dish;
     }

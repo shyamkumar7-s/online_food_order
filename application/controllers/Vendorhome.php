@@ -13,10 +13,14 @@ class Vendorhome extends CI_Controller {
         $this->load->model('User_model');
         $this->load->model('Order_model');
         $this->load->model('Category_model');
+        $user = $this->User_model->getUsers();
     }
     public function index() {
+        $this->load->model('User_model');
+        $user = $this->User_model->getUsers();
+        $data['u_id'] = $user;
         $this->load->view('vendor/partials/header');
-        $this->load->view('vendor/dashboard');
+        $this->load->view('vendor/dashboard',$data['u_id']);
         $this->load->view('vendor/partials/footer');
     }
 

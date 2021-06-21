@@ -86,6 +86,10 @@
                 <a href="<?php echo base_url()?>vendor/menu/create_menu/<?php echo $data; ?>"
                         class="btn btn-success mb-3">undakkunnu</a>
                         </div>
+                        <div class="col-md-12">
+                <a href="<?php echo base_url()?>vendor/orders/index/<?php echo $data; ?>"
+                        class="btn btn-success mb-3">parcel</a>
+                        </div>
             </div>
         </div>
     </div>

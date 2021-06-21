@@ -15,6 +15,15 @@ class Order_model extends CI_Model {
         return $result;
     }
 
+    public function getRestOrder($id) {
+        $this->db->select('o_id, r_id, d_id, users.u_id, d_name, quantity, price, status, f_name, l_name, user_orders.date, users.email, users.phone,  success-date, username, address');
+        $this->db->from('user_orders');
+        $this->db->join('users', 'users.u_id = user_orders.u_id');
+        $this->db->where('r_id', $id);
+        $result = $this->db->get()->result_array();
+        return $result;
+    }
+
     public function getUserOrder($id) {
         $this->db->where('u_id', $id);
         $this->db->order_by('o_id','DESC');

@@ -12,9 +12,9 @@ class Store extends CI_Controller {
         $user = $this->session->flashdata('user');
         $this->load->model('Category_model');
         $cats = $this->Category_model->getCategory();
-        $this->load->view('admin/partials/header');
+        $this->load->view('vendor/partials/header');
                     $this->load->view('admin/add_res', $user);
-                    $this->load->view('admin/partials/footer');
+                    $this->load->view('vendor/partials/footer');
         
     }
 

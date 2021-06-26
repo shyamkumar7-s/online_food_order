@@ -20,11 +20,10 @@ class Login extends CI_Controller {
              if(!empty($admin)) {
                 $password = $this->input->post('password');
                 if( password_verify($password, $admin['password']) == true) {
-
                     $adminArray['admin_id'] = $admin['admin_id'];
                     $adminArray['username'] = $admin['username'];
                     $this->session->set_userdata('admin', $adminArray);
-                    redirect(base_url().'admin/home');
+                    redirect(base_url().'adminhome/index');
                 } else {
                     $this->session->set_flashdata('msg', 'Either username or password is incorrect');
                     redirect(base_url().'admin/login/index');

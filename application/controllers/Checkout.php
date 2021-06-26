@@ -16,6 +16,7 @@ class Checkout extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->library('cart');
         $this->load->model('Order_model');
+        $this->load->model('Electricpost_model');
         $this->load->model('User_model');
         $this->controller = 'checkout';
     }
@@ -24,6 +25,7 @@ class Checkout extends CI_Controller {
        $loggedUser = $this->session->userdata('user');
        $u_id = $loggedUser['user_id'];
        $user = $this->User_model->getUser($u_id);
+       $post = $this->Electricpost_model->getPost();
 
         if($this->cart->total_items() <= 0) {
             redirect(base_url().'restaurant');
@@ -45,7 +47,7 @@ class Checkout extends CI_Controller {
                      $data['error_msg'] = "Order submission failed, please try again.";
                 }
             }
-
+        $data['post'] = $post;
         $data['user'] = $user;
         $data['cartItems'] = $this->cart->contents();
         $this->load->view('front/partials/header');

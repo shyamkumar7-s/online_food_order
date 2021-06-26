@@ -24,9 +24,9 @@
                                     src="<?php echo base_url().'public/uploads/dishesh/thumb/'.$image; ?>">
                             </td>
                             <td><?php echo $item['name']; ?></td>
-                            <td><?php echo '$'.$item['price']; ?></td>
+                            <td><?php echo '₹'.$item['price']; ?></td>
                             <td><?php echo $item['qty']; ?></td>
-                            <td><?php echo '$'.$item['subtotal']; ?></td>
+                            <td><?php echo '₹'.$item['subtotal']; ?></td>
                         </tr>
                         <?php } ?>
                         <?php } else { ?>
@@ -41,7 +41,7 @@
                         <tr>
                             <td colspan="4"></td>
                             <?php  if($this->cart->total_items() > 0) { ?>
-                            <td class="text-left">Total: <b><?php echo '$'.$this->cart->total();?></b></td>
+                            <td class="text-left">Total: <b><?php echo '₹'.$this->cart->total();?></b></td>
                             <?php } ?>
                         </tr>
                     </tfoot>
@@ -59,6 +59,29 @@
                     <?php echo (form_error('address') != "") ? 'is-invalid' : '';?>"><?php echo set_value('address', $user['address']);?></textarea>
                     <?php echo form_error('address'); ?>
                 </div>
+
+
+                <?php
+                $kt = array();
+                 foreach($post as $electric) { ?>
+                    <tr>
+                        <td>
+                        <?php 
+                        $kt[]= $electric['electric_post'];
+                        ?>
+                        </td>
+                    </tr>
+                    <?php }?>
+
+
+
+                <div class="form-group">
+                    <label for="electric_post">Post Number</label>
+                    <textarea name="electric_post" type="text" style="height:40px;"
+                        class="form-control" id="postNumber"></textarea>
+                        <span style="display:none; color:red; font-size:14px; text-transform:capitalize; font-weight: 600;"  id="postValidate">this number is not valid</span>
+                </div>
+
                 <p class="lead mb-0">Cash On Delivery</p>
                 <div class="container p-2 mb-3" style="background: #e5e5e5;">
                     Pay with Cash on Delivery
@@ -72,4 +95,29 @@
                 </from>
         </div>
     </div>
+
+
 </div>
+<script>
+// get data from database
+var postDBArray = <?php echo json_encode($kt); ?>;
+let postNumber = document.getElementById('postNumber');
+let postValidateMgs = document.getElementById('postValidate')
+
+ //Validation
+postNumber.addEventListener('change', function(){
+     let electricPoleNumber = postNumber.value;
+     for(var i = 0; i < postDBArray.length; i++){
+    if(electricPoleNumber === postDBArray[i])
+    {
+        postValidateMgs.style.display="none";
+        return;
+    }
+    else{
+        postValidateMgs.style.display="block";
+    }
+}
+ })
+ 
+ 
+</script>

@@ -12,10 +12,10 @@ class Electricpost_model extends CI_Model {
         return $result;
     }
 
-    public function getSingleDish($id) {
-        $this->db->where('d_id', $id);
-        $dish = $this->db->get('electric_post')->row_array();
-        return $dish;
+    public function getSinglePost($id) {
+        $this->db->where('post_id', $id);
+        $post = $this->db->get('electric_post')->row_array();
+        return $post;
     }
 
     public function update($id, $formArray) {

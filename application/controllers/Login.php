@@ -33,9 +33,6 @@ class Login extends CI_Controller {
                 elseif ($user["mode"] =='vendor'){
                     redirect(base_url().'vendorhome/index');
                 }
-                elseif ($user["mode"] =='admin'){
-                    redirect(base_url().'adminhome/index');
-                }
                 } else {
                     $this->session->set_flashdata('msg', 'Either username or password is incorrect');
                     redirect(base_url().'login/index');

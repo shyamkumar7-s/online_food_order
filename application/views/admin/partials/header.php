@@ -59,6 +59,21 @@
                                 Category</a>
                         </div>
                     </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ElectricPost
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="<?php echo base_url().'admin/electricpost/';?>">Manage
+                            ElectricPost</a>
+                            <a class="dropdown-item"
+                                href="<?php echo base_url().'admin/electricpost/create_post';?>">Create
+                                ElectricPost</a>
+                        </div>
+                    </li>
+
                     <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

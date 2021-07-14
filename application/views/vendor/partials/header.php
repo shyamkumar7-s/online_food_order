@@ -10,14 +10,39 @@
     <script src="<?php echo base_url().'assets/js/bootstrap.min.js';?>"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" href="<?php echo base_url('/assets/css/dashboard.css');?>">
+    <style>
+.business-panel .restro-name{
+    color:#f8cd21;
+    letter-spacing:2px;
+}
+.business-panel .navbar {
+    background-color: #000;
+}
+.business-panel .business-data{
+    display:flex;
+}
+.business-panel .business-data .card{
+    background-color: #2b281e;
+    padding: 10px;
+    text-align: center;
+    font-size: 44px;
+    margin-right: 50px;
+}
+.business-panel .business-data .card .btn-prmary{
+    color:#f8cd21;
+    background-color:#f8cd21;
+    text-transform:uppercase;
+
+}
+</style>
 </head>
 
-<body class="bg-white">
+<body class="business-panel">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top mb-3">
+    <nav class="navbar navbar-expand-md navbar-light sticky-top mb-3 border-bottom">
         <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo base_url().'admin/home';?>">Bussiness Panel</a>
+            <a class="navbar-brand text-white" href="<?php echo base_url().'admin/home';?>">Bussiness Panel</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarRes">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,25 +50,25 @@
             <div class="collapse navbar-collapse" id="navbarRes">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Home
                         </a>
                     </li>
                     <li class="nav-item dropdown active ">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             About
                         </a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Serivices
                         </a>
                     </li>
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Contact
                         </a>
